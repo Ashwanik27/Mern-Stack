@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circles with Image and Name</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .circle span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-weight: bold;
+    padding: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle">
+      <img src="profile.jpg" alt="Ashwani">
+      <span>Ashwani</span>
+    </div>
+    <div class="circle">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.V8kd8UnnTcl3KMdimt4faQHaEK?pid=Api&P=0&h=220" alt="Rahul">
+      <span>Rahul</span>
+    </div>
+    <div class="circle">
+      <img src="https://c0.wallpaperflare.com/preview/440/175/730/fashion-style-boys-fashion-pose.jpg" alt="karan">
+      <span>karan</span>
+    </div>
+  </div>
+</body>
+</html>
