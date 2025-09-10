@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Height Transition Example</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 150px;
+      background: rgb(20, 131, 168);
+      transition: height 2s ease 2s; 
+      /* animate height over 2s, starting after 2s */
+    }
+
+    .box:hover {
+      height: 200px; /* height after hover */
+    }
+  </style>
+</head>
+<body>
+  <h2>Hover over the box to see the height transition</h2>
+  <div class="box"></div>
+</body>
+</html>
