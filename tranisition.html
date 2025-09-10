@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -21,4 +21,31 @@
   <h2>Hover over the box to see the height transition</h2>
   <div class="box"></div>
 </body>
+</html> -->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Height Transition - Slow Then Fast</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 150px;
+      background: rgb(20, 131, 168);
+      transition: height 2s ease-in; /* starts slow, ends fast */
+    }
+
+    .box:hover {
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Hover over the box to see the height transition (slow then fast)</h2>
+  <div class="box"></div>
+</body>
 </html>
+
