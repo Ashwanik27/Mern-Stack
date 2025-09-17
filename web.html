@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Blog Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+    }
+    nav {
+      background: #222;
+      padding: 10px 0;
+    }
+    nav ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover {
+      background: #444;
+    }
+    .search-bar input {
+      padding: 3px 7px;
+      border-radius: 3px;
+      border: none;
+    }
+    .search-bar button {
+      padding: 3px 12px;
+      border: none;
+      border-radius: 3px;
+      background: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+    header {
+      background: #fff;
+      padding: 22px 0 14px 0;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+    }
+    .blog-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 35px 0;
+      flex-wrap: wrap;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 7px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+      padding: 22px 22px 16px 22px;
+      width: 320px;
+      margin: 0 15px;
+      transition: box-shadow 0.2s;
+    }
+    .blog-card:hover {
+      box-shadow: 0 12px 30px rgba(0,0,0,0.16);
+    }
+    .image-box {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      border-radius: 4px;
+    }
+    .image-box img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      transition: opacity 0.3s;
+      display: block;
+    }
+    .image-box .hover-img {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .image-box:hover .hover-img {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .image-box:hover .default-img {
+      opacity: 0;
+    }
+    h4 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Post</a></li>
+      <li><a href="#">About Us</a></li>
+      <li>
+        <form class="search-bar" action="/search" method="GET">
+          <input type="text" name="q" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h2>Daily Blog Website</h2>
+    <hr>
+  </header>
+
+  <!-- Blog Posts -->
+  <section class="blog-container">
+    <div class="blog-card">
+      <h4>Beach</h4>
+      <div class="image-box">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.NqEsAsh3n8eSKc96yu0A8AHaFj?pid=Api&P=0&h=220" class="default-img" alt="Beach">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.zps_0JHHcJV5NqRFCPKZWQHaE8?pid=Api&P=0&h=220" class="hover-img" alt="Beach hover">
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident tempora est impedit! Quaerat deleniti sed dicta...</p>
+    </div>
+    <div class="blog-card">
+      <h4>Travelling</h4>
+      <div class="image-box">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.a_08RzRVERcEguNmSAGJdgHaE8?pid=Api&P=0&h=220" class="default-img" alt="Travelling">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=800&q=80" class="hover-img" alt="Travelling hover">
+        <img src="https://tse1.mm.bing.net/th?id=OIF.AUT%2ftyGz7de1c5j%2bVMNgfg&pid=Api&P=0&h=220" class="hover-img" alt="Beach hover">
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat cupiditate, vel suscipit atque nobis labore vero...</p>
+    </div>
+    <div class="blog-card">
+      <h4>About Us</h4>
+      <div class="image-box">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?fit=crop&w=800&q=80" class="default-img" alt="About Us">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?fit=crop&w=800&q=80" class="hover-img" alt="About hover">
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ea magni accusamus ex, praesentium soluta similique in maiores...</p>
+    </div>
+  </section>
+
+</body>
+</html>
